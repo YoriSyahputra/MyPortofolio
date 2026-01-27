@@ -1,0 +1,16 @@
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            filter: blur(10px);
+            transition: opacity 1.2s var(--ease-premium), 
+                        transform 1.2s var(--ease-premium), 
+                        filter 1.2s var(--ease-premium);
+            will-change: opacity, transform, filter;
+        }
+
+        /* State aktif: Muncul */
+        .reveal-element.in-view {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }

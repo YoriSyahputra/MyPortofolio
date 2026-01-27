@@ -1,0 +1,31 @@
+        :root {
+            --bg-color: #050505;
+            --surface-color: #121212;
+            --surface-hover: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+            --accent-subtle: #333333;
+            --border-color: #222222;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --ease-premium: cubic-bezier(0.16, 1, 0.3, 1); /* Apple-style easing */
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
