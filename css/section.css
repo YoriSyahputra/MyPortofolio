@@ -1,169 +1,231 @@
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+}
 
-        /* HERO SECTION */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 80px;
-        }
+.profile-container {
+    margin-bottom: 40px;
+}
 
-        .profile-container {
-            margin-bottom: 40px;
-        }
-        
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%; /* Lingkaran sempurna */
-            background-color: #222;
-            overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.1);
-            position: relative;
-        }
-        
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%); /* Hitam putih biar elegan */
-            transition: 0.5s;
-        }
-        .profile-img:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #222;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.1);
+    position: relative;
+}
 
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem); /* Responsive font besar */
-            font-weight: 500;
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin-bottom: 32px;
-            background: linear-gradient(to right, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s var(--ease-premium);
+}
 
-        .hero-desc {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 500px;
-            margin-bottom: 48px;
-        }
+.profile-img:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
 
-        /* BENTO GRID LAYOUT FOR PROJECTS & SKILLS */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr); /* 12 Column grid */
-            gap: 24px;
-            margin: 100px 0;
-        }
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    background: linear-gradient(to right, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .bento-item {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 32px;
-            position: relative;
-            overflow: hidden;
-            transition: border-color 0.3s, transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+/* --- Layout Deskripsi Dua Kolom --- */
+.hero-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 48px;
+    max-width: 1100px;
+}
 
-        .bento-item:hover {
-            border-color: #444;
-            background-color: var(--surface-hover);
-        }
+.hero-column {
+    flex: 1;
+}
 
-        /* Span classes to make grid irregular/interesting */
-        .span-12 { grid-column: span 12; }
-        .span-8 { grid-column: span 8; }
-        .span-6 { grid-column: span 6; }
-        .span-4 { grid-column: span 4; }
+.hero-desc {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0; /* Reset margin untuk wrapper baru */
+}
 
-        @media (max-width: 768px) {
-            .span-8, .span-6, .span-4 { grid-column: span 12; }
-        }
+/* Garis Pembatas Vertikal */
+.vertical-divider {
+    width: 1px;
+    align-self: stretch;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(255,255,255,0.2) 20%, 
+        rgba(255,255,255,0.2) 80%, 
+        transparent 100%
+    );
+}
 
-        /* Project Specific Styles */
-        .project-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            display: block;
-        }
+/* ==========================================================================
+   BENTO GRID LAYOUT (PROJECTS & SKILLS)
+   ========================================================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin: 100px 0;
+}
 
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 12px;
-            color: #fff;
-        }
+.bento-item {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .project-desc {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
+.bento-item:hover {
+    border-color: #444;
+    background-color: var(--surface-hover);
+}
 
-        .project-visual {
-            width: 100%;
-            height: 200px;
-            background: #1a1a1a;
-            border-radius: 12px;
-            margin-top: auto;
-            overflow: hidden;
-            position: relative;
-        }
+/* Span classes */
+.span-12 { grid-column: span 12; }
+.span-8 { grid-column: span 8; }
+.span-6 { grid-column: span 6; }
+.span-4 { grid-column: span 4; }
 
-        .project-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-            transition: transform 0.7s var(--ease-premium);
-        }
-        .bento-item:hover .project-visual img {
-            transform: scale(1.05);
-            opacity: 1;
-        }
+/* Project Styles */
+.project-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: block;
+}
 
-        /* Skills List within Bento */
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .skill-pill {
-            padding: 8px 16px;
-            border-radius: 50px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            color: #ccc;
-        }
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #fff;
+}
 
-        /* FOOTER */
-        footer {
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 80px;
-        }
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .footer-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-right: 24px;
-            transition: color 0.2s;
-        }
-        .footer-link:hover { color: #fff; }
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.project-visual {
+    width: 100%;
+    height: 200px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-top: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 0.7s var(--ease-premium);
+}
+
+.bento-item:hover .project-visual img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Skills List */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-pill {
+    padding: 8px 16px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    padding: 80px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 80px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-right: 24px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover { 
+    color: #fff; 
+}
+
+/* ==========================================================================
+   RESPONSIVE (MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .span-8, .span-6, .span-4 { 
+        grid-column: span 12; 
+    }
+
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .vertical-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, 
+            transparent, 
+            rgba(255,255,255,0.2), 
+            transparent
+        );
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+}
