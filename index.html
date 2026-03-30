@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Web Developer</title>
+    <title>Yori Syahputra | Back-End Developer Portfolio</title>
     <link rel="stylesheet" href="./css/ac.css">
+
     <link rel="stylesheet" href="./css/cmpn.css">
     <link rel="stylesheet" href="./css/cvr.css">
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/utility.css">
-    
 </head>
 <body>
 
@@ -17,11 +17,18 @@
 
     <nav>
         <div class="container nav-inner">
-            <div class="logo">
-                <span class="status-dot"></span>Available for work
+            <div class="logo" data-id="<span class='status-dot'></span>Tersedia untuk bekerja" data-en="<span class='status-dot'></span>Available for work">
+                <span class="status-dot"></span>Tersedia untuk bekerja
             </div>
-            <div>
-                <a href="mailto:email@anda.com" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Contact Me</a>
+            <div class="contact-wrapper">
+                <button class="btn-3" data-id="Hubungi Saya" data-en="Contact Me" onclick="toggleContactMenu()">Hubungi Saya</button>
+                <div id="contactMenu" class="contact-menu">
+                    <a href="https://wa.me/62882001371542" target="_blank">Whatsapp</a>
+                    <a href="mailto:yorisyahputra011@gmail.com">Email</a>
+                </div>
+            </div>
+                <!-- href="mailto:yorisyahputra011@gmail.com" -->
+                <a id="toggleBtn" class="btn-2">English</a>
             </div>
         </div>
     </nav>
@@ -31,29 +38,29 @@
         <section class="hero">
             <div class="profile-container reveal-element">
                 <div class="profile-img">
-                    <img src="https://ui-avatars.com/api/?name=User&background=333&color=fff" alt="Profile">
+                    <img src="public/profile.jpg" alt="Yori Syahputra">
                 </div>
             </div>
 
-            <h1 class="reveal-element" style="transition-delay: 0.1s;">
-                Building robust web<br>
-                applications with<br>
-                precision & purpose.
+            <h1 class="reveal-element" style="transition-delay: 0.1s;" 
+                data-id="Membangun sistem <br> web yang andal dan <br> efisien."
+                data-en="Building reliable <br> and efficient <br> web systems.">
+                Membangun sistem <br> web yang andal dan <br> efisien.
             </h1>
 
-            <p class="hero-desc reveal-element" style="transition-delay: 0.2s;">
-                Saya Yori Syahputra Wisnu mahasiswa Universitas Terbuka dan Web Developer. 
-                Fokus menciptakan solusi teknis yang efisien menggunakan Laravel, AdonisJS, 
-                dan infrastruktur Linux.
+            <p class="hero-desc reveal-element" style="transition-delay: 0.2s;"
+               data-id="Halo, saya Yori. Mahasiswa Universitas Terbuka yang berfokus pada pengembangan back-end. Saya senang mengubah logika kompleks menjadi solusi web yang stabil menggunakan Laravel."
+               data-en="Hi, I'm Yori. An IT student at Universitas Terbuka focusing on back-end development. I enjoy turning complex logic into stable web solutions using Laravel.">
+                Halo, saya Yori. Mahasiswa Universitas Terbuka yang berfokus pada pengembangan back-end. Saya senang mengubah logika kompleks menjadi solusi web yang stabil menggunakan Laravel.
             </p>
 
             <div class="reveal-element" style="transition-delay: 0.3s;">
-                <a href="#projects" class="btn">Lihat Project</a>
+                <a href="#projects" class="btn" data-id="Lihat Project" data-en="View Projects">Lihat Project</a>
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="reveal-element" style="margin-bottom: 40px; font-weight: 400; color: #555;">SELECTED WORKS (2025-2026)</h2>
+            <h2 class="reveal-element" style="margin-bottom: 40px; font-weight: 400; color: #555;" data-id="KARYA TERPILIH (2025-2026)" data-en="SELECTED WORKS (2025-2026)">KARYA TERPILIH (2025-2026)</h2>
             
             <div class="bento-grid">
                 
@@ -61,31 +68,29 @@
                     <div>
                         <span class="project-tag">E-Commerce / UjiKom</span>
                         <h3 class="project-title">Ludwig Commerce</h3>
-                        <p class="project-desc">
-                            Aplikasi e-commerce komprehensif berbasis Laravel. 
-                            Fitur mencakup manajemen inventaris stok real-time, 
-                            struktur database relasional (ERD) kompleks, dan panel admin.
+                        <p class="project-desc" 
+                           data-id="Platform e-commerce berbasis Laravel dengan manajemen inventaris stok real-time dan struktur database yang kompleks."
+                           data-en="A Laravel-based e-commerce platform featuring real-time inventory management and a complex database structure.">
+                            Platform e-commerce berbasis Laravel dengan manajemen inventaris stok real-time dan struktur database yang kompleks.
                         </p>
                     </div>
                     <div class="project-visual">
-                        <img src="https://placehold.co/800x400/111/444?text=Ludwig+UI" alt="Ludwig Project">
+                        <img src="public/ludwig.png" alt="Ludwig Project">
                     </div>
                 </div>
 
                 <div class="bento-item span-4 reveal-element" style="background: #0a0a0a;">
                     <div>
-                        <span class="project-tag">Technical Stack</span>
-                        <h3 class="project-title">Core Expertise</h3>
-                        <p class="project-desc">Teknologi yang saya gunakan.</p>
+                        <span class="project-tag" data-id="KEAHLIAN TEKNIS" data-en="TECHNICAL STACK">KEAHLIAN TEKNIS</span>
+                        <h3 class="project-title" data-id="Keahlian Utama" data-en="Core Expertise">Keahlian Utama</h3>
+                        <p class="project-desc" data-id="Teknologi yang saya gunakan." data-en="Technologies I use.">Teknologi yang saya gunakan.</p>
                         <div class="skill-list">
                             <span class="skill-pill">PHP / Laravel</span>
-                            <span class="skill-pill">AdonisJS</span>
                             <span class="skill-pill">Linux Ubuntu</span>
                             <span class="skill-pill">MySQL</span>
                             <span class="skill-pill">HTML</span>
                             <span class="skill-pill">CSS</span>
                             <span class="skill-pill">JS</span>
-                            
                         </div>
                     </div>
                 </div>
@@ -94,41 +99,42 @@
                     <div>
                         <span class="project-tag">Internship @ Telkom</span>
                         <h3 class="project-title">Monqe.site</h3>
-                        <p class="project-desc">
-                            Dikembangkan selama masa magang di Telkom Indonesia. 
-                            Implementasi web service untuk kebutuhan industri nyata.
+                        <p class="project-desc" 
+                           data-id="Implementasi web service untuk kebutuhan industri yang dikembangkan selama masa magang di Telkom Indonesia."
+                           data-en="Implementation of industrial-grade web services developed during my internship at Telkom Indonesia.">
+                            Implementasi web service untuk kebutuhan industri yang dikembangkan selama masa magang di Telkom Indonesia.
                         </p>
                     </div>
                     <div class="project-visual">
-                        <img src="https://placehold.co/600x400/111/444?text=Monqe+Site" alt="Monqe">
+                        <img src="public/monqre.png" alt="Monqe">
                     </div>
                 </div>
 
                 <div class="bento-item span-4 reveal-element">
                     <div>
-                        <span class="project-tag">Productivity Tool</span>
+                        <span class="project-tag" data-id="ALAT PRODUKTIVITAS" data-en="PRODUCTIVITY TOOL">ALAT PRODUKTIVITAS</span>
                         <h3 class="project-title">UTReminder</h3>
-                        <p class="project-desc">
-                            Personal project untuk manajemen jadwal kuliah dan tugas 
-                            di Universitas Terbuka.
+                        <p class="project-desc" 
+                           data-id="Proyek personal untuk membantu manajemen jadwal perkuliahan dan tugas mahasiswa Universitas Terbuka."
+                           data-en="A personal project designed to manage course schedules and assignments for Universitas Terbuka students.">
+                            Proyek personal untuk membantu manajemen jadwal perkuliahan dan tugas mahasiswa Universitas Terbuka.
                         </p>
                     </div>
                     <div class="project-visual">
-                        <img src="https://placehold.co/600x400/111/444?text=UT+Reminder" alt="Reminder">
+                        <img src="public/UTReminder.png" alt="Reminder">
                     </div>
                 </div>
 
                 <div class="bento-item span-4 reveal-element">
                     <div>
-                        <span class="project-tag">Upcoming Project</span>
-                        <h3 class="project-title">Coming Soon...</h3>
-                        <p class="project-desc">
-                            Soon To be announced. Stay tuned!
+                        <span class="project-tag" data-id="PROYEK MENDATANG" data-en="UPCOMING PROJECT">PROYEK MENDATANG</span>
+                        <h3 class="project-title" data-id="Segera Hadir..." data-en="Coming Soon...">Segera Hadir...</h3>
+                        <p class="project-desc" data-id="Sedang dalam proses pengembangan. Tunggu tanggal mainnya!" data-en="Currently in development. Stay tuned for updates!">
+                            Sedang dalam proses pengembangan. Tunggu tanggal mainnya!
                         </p>
-                      
                     </div>
                     <div class="project-visual">
-                        <img src="https://placehold.co/600x400/111/444?text=NEXT+PROJECT" alt="Reminder">
+                        <img src="https://placehold.co/600x400/111/444?text=NEXT+PROJECT" alt="Next Project">
                     </div>
                 </div>
 
@@ -139,15 +145,16 @@
             <div class="bento-grid">
                 <div class="bento-item span-12 reveal-element" style="flex-direction: row; align-items: center; gap: 40px; min-height: 300px;">
                     <div style="flex: 1;">
-                        <span class="project-tag">Workspace & Gear</span>
-                        <h3 class="project-title" style="font-size: 2rem;">Hardware Enthusiast.</h3>
-                        <p class="project-desc" style="max-width: 90%;">
-                            Selain coding, saya memiliki ketertarikan mendalam pada PC Building dan Local AI Models. 
-                            Memahami interaksi *low-level* antara software dan hardware membantu saya menulis kode yang lebih efisien.
+                        <span class="project-tag" data-id="PERANGKAT & WORKSPACE" data-en="WORKSPACE & GEAR">PERANGKAT & WORKSPACE</span>
+                        <h3 class="project-title" style="font-size: 2rem;" data-id="Penggiat Perangkat Keras." data-en="Hardware Enthusiast.">Penggiat Perangkat Keras.</h3>
+                        <p class="project-desc" style="max-width: 90%;"
+                           data-id="Selain menulis kode, saya mendalami perakitan PC dan model AI lokal. Memahami interaksi antara software dan hardware membantu saya membangun aplikasi yang lebih optimal."
+                           data-en="Beyond coding, I delve into PC building and local AI models. Understanding how software interacts with hardware allows me to build more optimized applications.">
+                            Selain menulis kode, saya mendalami perakitan PC dan model AI lokal. Memahami interaksi antara software dan hardware membantu saya membangun aplikasi yang lebih optimal.
                         </p>
                     </div>
                     <div style="flex: 1; height: 100%; min-height: 200px; border-radius: 12px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #333;">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1 x1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
                     </div>
                 </div>
             </div>
@@ -159,12 +166,11 @@
         <div class="container footer-inner reveal-element">
             <div>
                 <p style="color: #444; margin-bottom: 10px;">&copy; 2026 Portfolio.</p>
-                <p style="font-size: 0.8rem; color: #333;">Built with clean code & precision.</p>
             </div>
             <div>
                 <a href="https://github.com/YoriSyahputra" class="footer-link">GitHub</a>
-                <a href="#" class="footer-link">LinkedIn</a>
-                <a href="#" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/yori-syahputra-00a9472b0/" class="footer-link">LinkedIn</a>
+                <a href="mailto:yorisyahputra011@gmail.com" class="footer-link">Email</a>
             </div>
         </div>
     </footer>
