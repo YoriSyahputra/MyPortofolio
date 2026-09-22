@@ -1,134 +1,140 @@
 /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 24px 0;
-            z-index: 100;
-            background: rgba(5, 5, 5, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            font-size: 1.1rem;
-        }
-        .status-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            margin-right: 8px;
-            box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
-        }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 24px;
-            border-radius: 100px;
-            background: #fff;
-            color: #000;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s var(--ease-premium);
-        }
-        .btn:hover {
-            transform: scale(1.05);
-        }
-        .btn-2 {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 20px;
-            border-radius: 100px;
-            background: #fff;
-            color: #000;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s var(--ease-premium);
-        }
-        .btn-2:hover {
-            transform: scale(1.05);
-        }
-        .btn-3 {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 20px;
-            border-radius: 100px;
-            background: #222;
-            color: #ffffff;
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: transform 0.3s var(--ease-premium);
-        }
-        .btn-3:hover {
-            transform: scale(1.01);
-        }
-        .contact-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-        .contact-menu {
-            display: block;
-            visibility: hidden;
-            opacity: 0;
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 10px;
-            background-color: white;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            min-width: 150px;
-            z-index: 1000;
+.logo {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 1.1rem;
+}
 
-            transform: translateY(-10px);
-            transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-            pointer-events: none;
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
 
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 100px;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-premium);
+}
 
-        }
+.btn:hover {
+  transform: scale(1.05);
+}
 
-        .contact-menu.show {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        .contact-menu a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+.btn-2 {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-premium);
+}
 
-        .contact-menu a:hover {
-            background-color: #f1f1f1;
-        }
+.btn-2:hover {
+  transform: scale(1.05);
+}
 
-        .contact-menu a:first-child:hover {
-            border-radius: 12px 12px 0 0;
-        }
+.btn-3 {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: #222;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition:
+    transform 0.3s var(--ease-premium),
+    background-color 0.2s;
+}
 
-        .contact-menu a:last-child:hover {
-            border-radius: 0 0 12px 12px;
-        }
+.btn-3:hover {
+  transform: scale(1.02);
+  background-color: #2a2a2a;
+}
 
-        .contact-menu a:hover {
-            background-color: #f1f1f1; /* Warna hover kamu */
-        }
-        .show {
-            display: block; 
-        }
+/* Contact Dropdown */
+.contact-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.contact-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background-color: #141414;
+  border: 1px solid #262626;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  min-width: 160px;
+  z-index: 1000;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.contact-menu a {
+  color: #ccc;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.contact-menu a:hover {
+  background-color: #222;
+  color: #fff;
+}

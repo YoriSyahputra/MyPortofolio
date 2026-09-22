@@ -1,198 +1,477 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yori Syahputra | Back-End Developer Portfolio</title>
-    <link rel="stylesheet" href="./css/ac.css">
-
-    <link rel="stylesheet" href="./css/cmpn.css">
-    <link rel="stylesheet" href="./css/cvr.css">
-    <link rel="stylesheet" href="./css/section.css">
-    <link rel="stylesheet" href="./css/utility.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yori Syahputra | Back-End Developer & Systems Enthusiast</title>
+    <link rel="stylesheet" href="./css/ac.css" />
+    <link rel="stylesheet" href="./css/cmpn.css" />
+    <link rel="stylesheet" href="./css/cvr.css" />
+    <link rel="stylesheet" href="./css/section.css" />
+    <link rel="stylesheet" href="./css/utility.css" />
+  </head>
+  <body>
     <div class="noise-overlay"></div>
 
     <nav>
-        <div class="container nav-inner">
-            <div class="logo" data-id="<span class='status-dot'></span>Tersedia untuk bekerja" data-en="<span class='status-dot'></span>Available for work">
-                <span class="status-dot"></span>Tersedia untuk bekerja
-            </div>
-
-            <div class="nav-actions">
-                <div class="contact-wrapper">
-                    <button class="btn-3" data-id="Hubungi Saya" data-en="Contact Me" onclick="toggleContactMenu()">Hubungi Saya</button>
-                    <div id="contactMenu" class="contact-menu">
-                        <a href="https://wa.me/62882001371542" target="_blank">Whatsapp</a>
-                        <a href="mailto:yorisyahputra011@gmail.com">Email</a>
-                    </div>
-                </div>
-                
-                <a id="toggleBtn" class="btn-2">English</a>
-            </div>
+      <div class="container nav-inner">
+        <div
+          class="logo"
+          data-id="<span class='status-dot'></span>Tersedia untuk Peluang Baru"
+          data-en="<span class='status-dot'></span>Available for Opportunities"
+        >
+          <span class="status-dot"></span>Tersedia untuk Peluang Baru
         </div>
+
+        <div class="nav-actions">
+          <div class="contact-wrapper">
+            <button
+              class="btn-3 contact-btn"
+              data-id="Hubungi Saya"
+              data-en="Contact Me"
+              onclick="toggleContactMenu()"
+            >
+              Hubungi Saya
+            </button>
+            <div id="contactMenu" class="contact-menu">
+              <a href="https://wa.me/62882001371542" target="_blank"
+                >WhatsApp</a
+              >
+              <a href="mailto:yorisyahputra011@gmail.com">Email</a>
+            </div>
+          </div>
+
+          <a id="toggleBtn" class="btn-2">English</a>
+        </div>
+      </div>
     </nav>
 
     <main class="container">
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="profile-container reveal-element">
+          <div class="profile-img">
+            <img src="public/profile.jpg" alt="Yori Syahputra" />
+          </div>
+        </div>
 
-        <section class="hero">
-            <div class="profile-container reveal-element">
-                <div class="profile-img">
-                    <img src="public/profile.jpg" alt="Yori Syahputra">
-                </div>
+        <h1
+          class="reveal-element"
+          style="transition-delay: 0.1s"
+          data-id="Membangun Sistem Web Andal <br>& Arsitektur Berorientasi <br>Efisiensi Performa."
+          data-en="Engineering Reliable Web Systems <br>& High-Efficiency <br>Architecture."
+        >
+          Membangun Sistem Web Andal <br />& Arsitektur Berorientasi
+          <br />Efisiensi Performa.
+        </h1>
+
+        <div
+          class="hero-content-wrapper reveal-element"
+          style="transition-delay: 0.2s"
+        >
+          <div class="hero-column">
+            <p
+              class="hero-desc"
+              data-id="Halo, saya Yori. Mahasiswa Sistem Informasi di Universitas Terbuka yang berfokus pada pengembangan Back-End. Saya terbiasa mendekati tantangan rekayasa perangkat lunak secara terukur—membangun alur logika yang bersih, aman, dan dapat diandalkan untuk kebutuhan jangka panjang."
+              data-en="Hi, I'm Yori. An Information Systems student at Universitas Terbuka specializing in Back-End development. I approach software engineering with a deliberate mindset—building clean, secure, and dependable logic flows built for long-term scalability."
+            >
+              Halo, saya Yori. Mahasiswa Sistem Informasi di Universitas Terbuka
+              yang berfokus pada pengembangan Back-End. Saya terbiasa mendekati
+              tantangan rekayasa perangkat lunak secara terukur—membangun alur
+              logika yang bersih, aman, dan dapat diandalkan untuk kebutuhan
+              jangka panjang.
+            </p>
+          </div>
+
+          <div class="vertical-divider"></div>
+
+          <div class="hero-column">
+            <p
+              class="hero-desc"
+              data-id="<strong>Manajemen Resource & Ekosistem Linux:</strong> Pengalaman bekerja erat di lingkungan Linux memberi saya kepekaan terhadap alokasi memori, eksekusi proses, dan efisiensi I/O untuk meminimalkan beban server dan latensi.<br><br><strong>Arsitektur API & Integritas Data:</strong> Saya berfokus pada perancangan skema database relasional yang terstruktur, penanganan exception yang ketat, serta konsistensi kontrak API yang siap diintegrasikan."
+              data-en="<strong>Resource Management & Linux Ecosystem:</strong> Working closely within Linux environments gives me practical insights into memory allocation, process execution, and I/O efficiency to minimize server load and latency.<br><br><strong>API Architecture & Data Integrity:</strong> I emphasize structured relational database schemas, rigorous exception handling, and consistent API contracts built for seamless integration."
+            >
+              <strong>Manajemen Resource & Ekosistem Linux:</strong> Pengalaman
+              bekerja erat di lingkungan Linux memberi saya kepekaan terhadap
+              alokasi memori, eksekusi proses, dan efisiensi I/O untuk
+              meminimalkan beban server dan latensi.<br /><br /><strong
+                >Arsitektur API & Integritas Data:</strong
+              >
+              Saya berfokus pada perancangan skema database relasional yang
+              terstruktur, penanganan exception yang ketat, serta konsistensi
+              kontrak API yang siap diintegrasikan.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal-element" style="transition-delay: 0.3s">
+          <a
+            href="#projects"
+            class="btn"
+            data-id="Eksplorasi Proyek"
+            data-en="Explore Projects"
+            >Eksplorasi Proyek</a
+          >
+        </div>
+      </section>
+
+      <!-- PROJECTS BENTO GRID -->
+      <section id="projects">
+        <h2
+          class="reveal-element"
+          style="margin-bottom: 40px; font-weight: 400; color: #888"
+          data-id="KARYA TERPILIH (2025-2026)"
+          data-en="SELECTED WORKS (2025-2026)"
+        >
+          KARYA TERPILIH (2025-2026)
+        </h2>
+
+        <div class="bento-grid">
+          <!-- 1. Ludwig Commerce (Span 8) -->
+          <div class="bento-item span-8 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="APLIKASI WEB / E-COMMERCE"
+                data-en="WEB APPLICATION / E-COMMERCE"
+                >APLIKASI WEB / E-COMMERCE</span
+              >
+              <h3 class="project-title">Ludwig Commerce</h3>
+              <p
+                class="project-desc"
+                data-id="Platform e-commerce berbasis Laravel dengan autentikasi multi-peran, manajemen inventaris stok real-time, dan pemodelan relasi database relasional yang teruji ketat."
+                data-en="A Laravel-based e-commerce platform featuring multi-role authentication, real-time inventory management, and a strictly structured relational database schema."
+              >
+                Platform e-commerce berbasis Laravel dengan autentikasi
+                multi-peran, manajemen inventaris stok real-time, dan pemodelan
+                relasi database relasional yang teruji ketat.
+              </p>
             </div>
-
-            <h1 class="reveal-element" style="transition-delay: 0.1s;" 
-                data-id="Membangun sistem <br> Web & Mengoptimalkan <br> Performa Perangkat Keras."
-                data-en="Building Web Systems <br> & Optimizing Hardware <br> Performance.">
-                Membangun Sistem <br> Web & Mengoptimalkan <br> Performa Perangkat Keras.
-            </h1>
-
-            <div class="hero-content-wrapper reveal-element" style="transition-delay: 0.2s;">
-                <div class="hero-column">
-                    <p class="hero-desc"
-                    data-id="Halo, saya Yori. Mahasiswa Universitas Terbuka yang berfokus pada pengembangan Back-End dan antusias terhadap dunia Game QA. Saya senang mengubah logika kompleks menjadi solusi digital yang stabil dan efisien."
-                    data-en="Hi, I'm Yori. A Computer Science student at Universitas Terbuka focusing on Back-End development and Game QA. I enjoy turning complex logic into stable, efficient digital solutions.">
-                        Halo, saya Yori. Mahasiswa Universitas Terbuka yang berfokus pada pengembangan Back-End dan antusias terhadap dunia Game QA. Saya senang mengubah logika kompleks menjadi solusi digital yang stabil dan efisien.
-                    </p>
-                </div>
-
-                <div class="vertical-divider"></div>
-
-                <div class="hero-column">
-                    <p class="hero-desc"
-                    data-id="<strong>Analisis Performa Game & Porting:</strong> Sebagai penggemar berat seri Borderlands, saya memiliki pengalaman langsung membandingkan kualitas game hasil porting antara platform PS4 dan Nintendo Switch. Saya memahami pentingnya optimasi aset agar game tetap berjalan lancar (stabil FPS) di perangkat dengan spesifikasi terbatas."
-                    data-en="<strong>Game Performance & Porting Analysis:</strong> As a dedicated fan of the Borderlands series, I have hands-on experience analyzing porting quality across PS4 and Nintendo Switch platforms. I understand the critical need for asset optimization to maintain smooth gameplay (stable FPS) on hardware-constrained devices.">
-                        <strong>Analisis Performa Game & Porting:</strong> Sebagai penggemar berat seri Borderlands, saya memiliki pengalaman langsung membandingkan kualitas game hasil porting antara platform PS4 dan Nintendo Switch. Saya memahami pentingnya optimasi aset agar game tetap berjalan lancar (stabil FPS) di perangkat dengan spesifikasi terbatas.
-                    </p>
-                </div>
+            <div class="project-visual">
+              <img src="public/ludwig.png" alt="Ludwig Commerce" />
             </div>
+          </div>
 
-            <div class="reveal-element" style="transition-delay: 0.3s;">
-                <a href="#projects" class="btn" data-id="Lihat Project" data-en="View Projects">Lihat Project</a>
+          <!-- 2. Technical Stack (Span 4) -->
+          <div
+            class="bento-item span-4 reveal-element"
+            style="background: #0a0a0a"
+          >
+            <div>
+              <span
+                class="project-tag"
+                data-id="KEAHLIAN TEKNIS"
+                data-en="TECHNICAL STACK"
+                >KEAHLIAN TEKNIS</span
+              >
+              <h3
+                class="project-title"
+                data-id="Fondasi & Toolkit"
+                data-en="Core Foundation & Stack"
+              >
+                Fondasi & Toolkit
+              </h3>
+              <p
+                class="project-desc"
+                data-id="Ekosistem dan teknologi yang saya gunakan."
+                data-en="Technologies and ecosystem I leverage."
+              >
+                Ekosistem dan teknologi yang saya gunakan.
+              </p>
+              <div class="skill-list">
+                <span class="skill-pill">PHP / Laravel</span>
+                <span class="skill-pill">Linux Ubuntu</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">RESTful API</span>
+                <span class="skill-pill">Postman</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">Tailwind CSS</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="projects">
-            <h2 class="reveal-element" style="margin-bottom: 40px; font-weight: 400; color: #555;" data-id="KARYA TERPILIH (2025-2026)" data-en="SELECTED WORKS (2025-2026)">KARYA TERPILIH (2025-2026)</h2>
-            
-            <div class="bento-grid">
-                
-                <div class="bento-item span-8 reveal-element">
-                    <div>
-                        <span class="project-tag">E-Commerce / UjiKom</span>
-                        <h3 class="project-title">Ludwig Commerce</h3>
-                        <p class="project-desc" 
-                           data-id="Platform e-commerce berbasis Laravel dengan manajemen inventaris stok real-time dan struktur database yang kompleks."
-                           data-en="A Laravel-based e-commerce platform featuring real-time inventory management and a complex database structure.">
-                            Platform e-commerce berbasis Laravel dengan manajemen inventaris stok real-time dan struktur database yang kompleks.
-                        </p>
-                    </div>
-                    <div class="project-visual">
-                        <img src="public/ludwig.png" alt="Ludwig Project">
-                    </div>
-                </div>
-
-                <div class="bento-item span-4 reveal-element" style="background: #0a0a0a;">
-                    <div>
-                        <span class="project-tag" data-id="KEAHLIAN TEKNIS" data-en="TECHNICAL STACK">KEAHLIAN TEKNIS</span>
-                        <h3 class="project-title" data-id="Keahlian Utama" data-en="Core Expertise">Keahlian Utama</h3>
-                        <p class="project-desc" data-id="Teknologi yang saya gunakan." data-en="Technologies I use.">Teknologi yang saya gunakan.</p>
-                        <div class="skill-list">
-                            <span class="skill-pill">PHP / Laravel</span>
-                            <span class="skill-pill">Linux Ubuntu</span>
-                            <span class="skill-pill">MySQL</span>
-                            <span class="skill-pill">HTML</span>
-                            <span class="skill-pill">CSS</span>
-                            <span class="skill-pill">JS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-item span-4 reveal-element">
-                    <div>
-                        <span class="project-tag">Internship @ Telkom</span>
-                        <h3 class="project-title">Monqe.site</h3>
-                        <p class="project-desc" 
-                           data-id="Implementasi web service untuk kebutuhan industri yang dikembangkan selama masa magang di Telkom Indonesia."
-                           data-en="Implementation of industrial-grade web services developed during my internship at Telkom Indonesia.">
-                            Implementasi web service untuk kebutuhan industri yang dikembangkan selama masa magang di Telkom Indonesia.
-                        </p>
-                    </div>
-                    <div class="project-visual">
-                        <img src="public/monqre.png" alt="Monqe">
-                    </div>
-                </div>
-
-                <div class="bento-item span-4 reveal-element">
-                    <div>
-                        <span class="project-tag" data-id="ALAT PRODUKTIVITAS" data-en="PRODUCTIVITY TOOL">ALAT PRODUKTIVITAS</span>
-                        <h3 class="project-title">UTReminder</h3>
-                        <p class="project-desc" 
-                           data-id="Proyek personal untuk membantu manajemen jadwal perkuliahan dan tugas mahasiswa Universitas Terbuka."
-                           data-en="A personal project designed to manage course schedules and assignments for Universitas Terbuka students.">
-                            Proyek personal untuk membantu manajemen jadwal perkuliahan dan tugas mahasiswa Universitas Terbuka.
-                        </p>
-                    </div>
-                    <div class="project-visual">
-                        <img src="public/UTReminder.png" alt="Reminder">
-                    </div>
-                </div>
-
-                <div class="bento-item span-4 reveal-element">
-                    <div>
-                        <span class="project-tag" data-id="PROYEK MENDATANG" data-en="UPCOMING PROJECT">PROYEK MENDATANG</span>
-                        <h3 class="project-title" data-id="Segera Hadir..." data-en="Coming Soon...">Segera Hadir...</h3>
-                        <p class="project-desc" data-id="Sedang dalam proses pengembangan. Tunggu tanggal mainnya!" data-en="Currently in development. Stay tuned for updates!">
-                            Sedang dalam proses pengembangan. Tunggu tanggal mainnya!
-                        </p>
-                    </div>
-                    <div class="project-visual">
-                        <img src="https://placehold.co/600x400/111/444?text=NEXT+PROJECT" alt="Next Project">
-                    </div>
-                </div>
-
+          <!-- 3. Monqe.site (Span 4) -->
+          <div class="bento-item span-4 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="MAGANG INDUSTRI @ TELKOM"
+                data-en="INDUSTRIAL INTERNSHIP @ TELKOM"
+                >MAGANG INDUSTRI @ TELKOM</span
+              >
+              <h3 class="project-title">Monqe.site</h3>
+              <p
+                class="project-desc"
+                data-id="Aplikasi web monitoring penanganan keluhan pelanggan dan rekayasa kualitas (QE) yang dirancang untuk mendukung efisiensi operasional di PT Telkom Indonesia."
+                data-en="A web-based customer complaint and quality engineering (QE) monitoring system designed to streamline operational workflows at PT Telkom Indonesia."
+              >
+                Aplikasi web monitoring penanganan keluhan pelanggan dan
+                rekayasa kualitas (QE) yang dirancang untuk mendukung efisiensi
+                operasional di PT Telkom Indonesia.
+              </p>
             </div>
-        </section>
-
-        <section style="margin-bottom: 100px;">
-            <div class="bento-grid">
-                <div class="bento-item span-12 reveal-element" style="flex-direction: row; align-items: center; gap: 40px; min-height: 300px;">
-                    <div style="flex: 1;">
-                        <span class="project-tag" data-id="ANALISIS SISTEM & GAME" data-en="SYSTEM & GAME ANALYSIS">ANALISIS SISTEM & GAME</span>
-                        <h3 class="project-title" style="font-size: 2rem;" data-id="Optimasi Lintas Platform." data-en="Cross-Platform Optimization.">Optimasi Lintas Platform.</h3>
-                        <p class="project-desc" style="max-width: 95%;"
-                        data-id="Memahami batasan hardware adalah kunci. Saya memiliki pengalaman menganalisis performa game di berbagai lingkungan, mulai dari konsol (PS4 & Switch) hingga sistem Linux, untuk memastikan stabilitas dan kualitas pengalaman pemain."
-                        data-en="Understanding hardware limitations is key. I have experience analyzing game performance across various environments, from consoles (PS4 & Switch) to Linux systems, ensuring stability and player experience quality.">
-                            Memahami batasan hardware adalah kunci. Saya memiliki pengalaman menganalisis performa game di berbagai lingkungan, mulai dari konsol (PS4 & Switch) hingga sistem Linux, untuk memastikan stabilitas dan kualitas pengalaman pemain.
-                        </p>
-                    </div>
-                    <div style="flex: 1; height: 100%; min-height: 200px; border-radius: 12px; background: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #444;">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01M12 6a10 10 0 0 0-10 10v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a10 10 0 0 0-10-10z"></path>
-                        </svg>
-                    </div>
-                </div>
+            <div class="project-visual">
+              <img src="public/monqre.png" alt="Monqe" />
             </div>
-        </section>
+          </div>
 
+          <!-- 4. UTReminder (Span 4) -->
+          <div class="bento-item span-4 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="ALAT PRODUKTIVITAS"
+                data-en="PRODUCTIVITY TOOL"
+                >ALAT PRODUKTIVITAS</span
+              >
+              <h3 class="project-title">UTReminder</h3>
+              <p
+                class="project-desc"
+                data-id="Aplikasi berbasis Laravel untuk manajemen jadwal perkuliahan dan pelacakan tenggat tugas secara terorganisir guna menjaga kedisiplinan alur belajar mahasiswa."
+                data-en="A Laravel-driven web app designed to manage university coursework deadlines and schedules, ensuring structured academic progress."
+              >
+                Aplikasi berbasis Laravel untuk manajemen jadwal perkuliahan dan
+                pelacakan tenggat tugas secara terorganisir guna menjaga
+                kedisiplinan alur belajar mahasiswa.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img src="public/UTReminder.png" alt="UTReminder" />
+            </div>
+          </div>
+
+          <!-- 5. API-BRIDGE (Span 4) -->
+          <div class="bento-item span-4 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="LAYANAN BACK-END / KALKULASI TARIF"
+                data-en="BACK-END SERVICE / FARE COMPUTATION"
+                >LAYANAN BACK-END / KALKULASI TARIF</span
+              >
+              <h3 class="project-title">API-BRIDGE Logistics Engine</h3>
+              <p
+                class="project-desc"
+                data-id="Layanan backend dan integrasi API untuk komputasi jarak dinamis, mengkalkulasi tarif per kilometer, biaya dasar perjalanan pertama, serta akumulasi biaya rute bertingkat."
+                data-en="A backend service and API integration engine for dynamic distance computation, tiered per-kilometer fare pricing, and trip route cost accumulation."
+              >
+                Layanan backend dan integrasi API untuk komputasi jarak dinamis,
+                mengkalkulasi tarif per kilometer, biaya dasar perjalanan
+                pertama, serta akumulasi biaya rute bertingkat.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img src="public/api-bridge.png" alt="API-BRIDGE Engine" />
+            </div>
+          </div>
+
+          <!-- 6. Code Scratchpad (Span 6) -->
+          <div class="bento-item span-6 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="APLIKASI RUNNER / DESKTOP TOOL"
+                data-en="CODE RUNNER / DESKTOP TOOL"
+                >APLIKASI RUNNER / DESKTOP TOOL</span
+              >
+              <h3 class="project-title">Code Scratchpad</h3>
+              <p
+                class="project-desc"
+                data-id="Aplikasi eksekusi kode terisolasi dengan editor terintegrasi dan live PTY terminal, dirancang untuk pengujian logika algoritma dan eksperimen komputasi secara instan."
+                data-en="An isolated code execution environment featuring an integrated editor and live PTY terminal for rapid algorithm benchmarking and instant logic prototyping."
+              >
+                Aplikasi eksekusi kode terisolasi dengan editor terintegrasi dan
+                live PTY terminal, dirancang untuk pengujian logika algoritma
+                dan eksperimen komputasi secara instan.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img src="public/code-scratchpad.png" alt="Code Scratchpad" />
+            </div>
+          </div>
+
+          <!-- 7. LazyVim Cheatsheet (Span 6) -->
+          <div class="bento-item span-6 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="APLIKASI REFERENSI / WORKFLOW"
+                data-en="REFERENCE APP / WORKFLOW"
+                >APLIKASI REFERENSI / WORKFLOW</span
+              >
+              <h3 class="project-title">LazyVim Cheatsheet App</h3>
+              <p
+                class="project-desc"
+                data-id="Aplikasi referensi interaktif berbasis tema Tokyo Night dengan fitur pencarian cepat pintasan keyboard, manajemen buffer, dan navigasi Neovim terstruktur."
+                data-en="An interactive Tokyo Night themed reference application featuring instant keymap fuzzy searching, buffer controls, and structured Neovim navigation."
+              >
+                Aplikasi referensi interaktif berbasis tema Tokyo Night dengan
+                fitur pencarian cepat pintasan keyboard, manajemen buffer, dan
+                navigasi Neovim terstruktur.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img
+                src="public/lazyvim-cheatsheet.png"
+                alt="LazyVim Cheatsheet"
+              />
+            </div>
+          </div>
+
+          <!-- 8. Note Food (Span 6) -->
+          <div class="bento-item span-6 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="APLIKASI ANDROID / ARUS KAS & PANGAN"
+                data-en="ANDROID APP / FOOD BUDGET & PANTRY"
+                >APLIKASI ANDROID / ARUS KAS & PANGAN</span
+              >
+              <h3 class="project-title">Note Food</h3>
+              <p
+                class="project-desc"
+                data-id="Aplikasi Android untuk pelacakan keuangan donasi pangan dan operasional belanja dapur secara real-time, dilengkapi kalkulasi pendapatan bersih otomatis, rincian belanja bahan pokok, dan pencatatan berbasis offline."
+                data-en="An Android application for real-time food program budget tracking and pantry expense management, featuring automated net revenue calculations, ingredient cost breakdowns, and offline-first storage."
+              >
+                Aplikasi Android untuk pelacakan keuangan donasi pangan dan
+                operasional belanja dapur secara real-time, dilengkapi kalkulasi
+                pendapatan bersih otomatis, rincian belanja bahan pokok, dan
+                pencatatan berbasis offline.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img src="public/notefood.jpg" alt="Note Food" />
+            </div>
+          </div>
+
+          <!-- 9. Cinematic Scene Pipeline (Span 6) -->
+          <div class="bento-item span-6 reveal-element">
+            <div>
+              <span
+                class="project-tag"
+                data-id="ORKESTRASI AI / PIPELINE CLI"
+                data-en="AI ORCHESTRATION / CLI PIPELINE"
+                >ORKESTRASI AI / PIPELINE CLI</span
+              >
+              <h3 class="project-title">Cinematic Scene Pipeline</h3>
+              <p
+                class="project-desc"
+                data-id="Sistem orkestrasi pipeline berbasis Python dan runner uv untuk mengubah premis naratif menjadi storyboard adegan sinematik multi-scene, memetakan konsistensi anchor karakter, serta mengeksekusi kompilasi prompt ke engine render gambar secara paralel."
+                data-en="A Python and uv-powered orchestration pipeline converting narrative premises into multi-scene cinematic storyboards, maintaining character anchor consistency, and compiling parallel prompts for image rendering engines."
+              >
+                Sistem orkestrasi pipeline berbasis Python dan runner uv untuk
+                mengubah premis naratif menjadi storyboard adegan sinematik
+                multi-scene, memetakan konsistensi anchor karakter, serta
+                mengeksekusi kompilasi prompt ke engine render gambar secara
+                paralel.
+              </p>
+            </div>
+            <div class="project-visual">
+              <img
+                src="public/cinematic-pipeline.png"
+                alt="Cinematic Scene Pipeline"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER BAWAH: INFRASTRUCTURE & WORKFLOW -->
+      <section style="margin-bottom: 100px">
+        <div class="bento-grid" style="margin-top: 0">
+          <div
+            class="bento-item span-12 reveal-element"
+            style="
+              flex-direction: row;
+              align-items: center;
+              gap: 40px;
+              min-height: 280px;
+            "
+          >
+            <div style="flex: 1">
+              <span
+                class="project-tag"
+                data-id="INFRASTRUKTUR & WORKFLOW"
+                data-en="INFRASTRUCTURE & WORKFLOW"
+                >INFRASTRUKTUR & WORKFLOW</span
+              >
+              <h3
+                class="project-title"
+                style="font-size: 2rem"
+                data-id="Fondasi Sistem Berkelanjutan."
+                data-en="Sustainable Systems Foundation."
+              >
+                Fondasi Sistem Berkelanjutan.
+              </h3>
+              <p
+                class="project-desc"
+                style="max-width: 95%"
+                data-id="Stabilitas perangkat lunak bermula dari lingkungan pengembangan yang terisolasi dan alur kerja yang disiplin. Dengan memanfaatkan ekosistem Linux, konfigurasi server yang rapi, dan pengujian API yang terukur, saya memastikan setiap sistem yang dibangun beroperasi secara konsisten dari tahap development hingga deployment."
+                data-en="Software reliability stems from controlled environments and disciplined development workflows. Leveraging the Linux ecosystem, structured server configurations, and rigorous API validation, I ensure every system maintains operational stability from local development to deployment."
+              >
+                Stabilitas perangkat lunak bermula dari lingkungan pengembangan
+                yang terisolasi dan alur kerja yang disiplin. Dengan
+                memanfaatkan ekosistem Linux, konfigurasi server yang rapi, dan
+                pengujian API yang terukur, saya memastikan setiap sistem yang
+                dibangun beroperasi secara konsisten dari tahap development
+                hingga deployment.
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1;
+                height: 100%;
+                min-height: 200px;
+                border-radius: 12px;
+                background: #161616;
+                border: 1px solid #282828;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #777;
+              "
+            >
+              <!-- Terminal / CLI Prompt Icon -->
+              <svg
+                width="84"
+                height="84"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container footer-inner reveal-element">
-            <div>
-                <p style="color: #444; margin-bottom: 10px;">&copy; 2026.</p>
-            </div>
-            <div>
-                <a href="https://github.com/YoriSyahputra" class="footer-link">GitHub</a>
-                <a href="https://www.linkedin.com/in/yori-syahputra-00a9472b0/" class="footer-link">LinkedIn</a>
-                <a href="mailto:yorisyahputra011@gmail.com" class="footer-link">Email</a>
-            </div>
+      <div class="container footer-inner reveal-element">
+        <div>
+          <p style="color: #444; margin-bottom: 10px">&copy; 2026.</p>
         </div>
+        <div>
+          <a href="https://github.com/YoriSyahputra" class="footer-link"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/yori-syahputra-00a9472b0/"
+            class="footer-link"
+            >LinkedIn</a
+          >
+          <a href="mailto:yorisyahputra011@gmail.com" class="footer-link"
+            >Email</a
+          >
+        </div>
+      </div>
     </footer>
 
     <script src="./js/brng.js"></script>
-</body>
+  </body>
 </html>

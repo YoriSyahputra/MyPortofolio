@@ -1,65 +1,73 @@
+// ==========================================================================
+// 1. ANIMASI SCROLL REVEAL (INTERSECTION OBSERVER)
+// ==========================================================================
+const scrollOptions = {
+  threshold: 0.1, // Elemen aktif saat 10% masuk viewport
+  rootMargin: "0px 0px -50px 0px", // Offset batas bawah
+};
 
-        const options = {
-            threshold: 0.1, // Elemen dianggap "terlihat" jika 10% masuk layar
-            rootMargin: "0px 0px -50px 0px" // Offset sedikit dari bawah
-        };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+    } else {
+      entry.target.classList.remove("in-view");
+    }
+  });
+}, scrollOptions);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Jika masuk layar -> Tambah class 'in-view'
-                    entry.target.classList.add('in-view');
-                } else {
-                    // Jika keluar layar -> Hapus class 'in-view'
-                    // Ini yang bikin efek hilang saat di-scroll menjauh (atas/bawah)
-                    entry.target.classList.remove('in-view');
-                }
-            });
-        }, options);
+// Daftarkan semua elemen dengan class 'reveal-element'
+const revealElements = document.querySelectorAll(".reveal-element");
+revealElements.forEach((el) => observer.observe(el));
 
-        // Targetkan semua elemen dengan class 'reveal-element'
-        const elements = document.querySelectorAll('.reveal-element');
-        elements.forEach(el => observer.observe(el));
-        // END OF LOGIC ANIMASI SCROLL (IN & OUT)
-        const toggleBtn = document.getElementById('toggleBtn');
-let currentLang = 'id'; 
+// ==========================================================================
+// 2. PENGALIH BAHASA (BILINGUAL SWITCHER)
+// ==========================================================================
+const toggleBtn = document.getElementById("toggleBtn");
+let currentLang = "id";
 
 if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-        // Ganti status bahasa
-        currentLang = (currentLang === 'id') ? 'en' : 'id';
+  toggleBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-        // Cari semua elemen yang punya data-id dan data-en
-        const translatableElements = document.querySelectorAll('[data-id][data-en]');
-        
-        translatableElements.forEach(el => {
-            // Animasi fade out sederhana saat teks berubah
-            el.style.opacity = '0';
-            el.style.transition = 'opacity 0.3s ease';
-            
-            setTimeout(() => {
-                el.innerHTML = el.getAttribute(`data-${currentLang}`);
-                el.style.opacity = '1';
-            }, 300);
-        });
+    // Toggle status bahasa
+    currentLang = currentLang === "id" ? "en" : "id";
 
-        // Ubah teks tombol
-        toggleBtn.innerText = (currentLang === 'id') ? 'English' : 'Indonesia';
+    // Ambil seluruh elemen yang memiliki atribut data-id dan data-en
+    const translatableElements =
+      document.querySelectorAll("[data-id][data-en]");
+
+    translatableElements.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transition = "opacity 0.25s ease";
+
+      setTimeout(() => {
+        el.innerHTML = el.getAttribute(`data-${currentLang}`);
+        el.style.opacity = "1";
+      }, 250);
     });
+
+    // Perbarui label tombol
+    toggleBtn.innerText = currentLang === "id" ? "English" : "Indonesia";
+  });
 }
 
+// ==========================================================================
+// 3. MENU KONTAK DROPDOWN
+// ==========================================================================
 function toggleContactMenu() {
-    document.getElementById('contactMenu').classList.toggle('show');
+  const contactMenu = document.getElementById("contactMenu");
+  if (contactMenu) {
+    contactMenu.classList.toggle("show");
+  }
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('.contact-btn')){
-        var dropdowns = document.GetElementByClassName("contact-menu");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')){
-                 openDropdown.classList.remove('show');
-            }
-        }
+// Tutup dropdown otomatis jika klik dilakukan di luar wrapper kontak
+window.addEventListener("click", (event) => {
+  if (!event.target.closest(".contact-wrapper")) {
+    const contactMenu = document.getElementById("contactMenu");
+    if (contactMenu && contactMenu.classList.contains("show")) {
+      contactMenu.classList.remove("show");
     }
-}
+  }
+});
